@@ -1,0 +1,23 @@
+---
+import { siteConfig as conf } from "../../lib/Config";
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="https://fav.farm/%F0%9F%8C%8A" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{conf.meta.title}</title>
+
+  <style>
+    @import url("https://cdn.laker.tech/web/css/font-stack.css");
+  </style>
+
+  <!-- font awesome -->
+  <link
+    href="https://cdn.laker.tech/web/fa/css/fontawesome.css"
+    rel="stylesheet"
+  />
+  <link href="https://cdn.laker.tech/web/fa/css/brands.css" rel="stylesheet" />
+  <link href="https://cdn.laker.tech/web/fa/css/solid.css" rel="stylesheet" />
+</head>

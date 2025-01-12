@@ -1,0 +1,11 @@
+---
+import links from "../../data/headerlinks.json"
+---
+
+<nav class="">
+  {
+    links.map((item) => (
+      <a href={item.link} class="mr-2 underline decoration-wavy decoration-magenta-light dark:decoration-magenta">{item.name}</a>
+    ))
+  }
+</nav>

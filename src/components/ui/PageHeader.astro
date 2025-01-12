@@ -1,0 +1,107 @@
+---
+import { datePretty } from "../../lib/filters/dateTime";
+import { capitaliseFirstLetter } from "../../lib/filters/text";
+const { date, title, type, icon, status, link, pinned } = Astro.props;
+---
+
+<div class="mb-2">
+  {
+    () => {
+      if (title) {
+        return (<h2 class="font-bold text-xl mt-2 mb-2">{title}</h2>
+            <div
+    class="bg-magenta-light dark:bg-magenta dark:text-base-black bg-opacity-25 px-5 py-1 w-fit rounded-2xl"
+  >
+    <span class="mr-2">
+      {
+        () => {
+          switch (type) {
+            case "micro":
+              return <i class="fa-solid fa-pencil" />;
+            case "essay":
+              return "📝";
+            case "list":
+              return "◯";
+            default:
+              return "🤷🏻‍♀️";
+          }
+        }
+      }
+    </span>
+
+    {
+      () => {
+        if (pinned) {
+          return <span>📌</span>;
+        }
+      }
+    }
+
+    {
+      () => {
+        if (date) {
+          return (
+            <span class="text-base-500 dark:text-base-black mx-2">
+              <i class="fa-solid fa-calendar-days mr-2" /> {datePretty(date)}
+            </span>
+          );
+        }
+      }
+    }
+
+    <span class="text-base-500 dark:text-base-black">
+      <i class="fa-solid fa-signal mr-2"></i>
+      {capitaliseFirstLetter(status)}
+    </span>
+  </div>
+        );
+      }
+    }
+  }
+
+  <div
+    class="bg-magenta-light dark:bg-magenta dark:text-base-black bg-opacity-25 px-5 py-1 w-fit rounded-2xl"
+  >
+    <span class="mr-2">
+      {
+        () => {
+          switch (type) {
+            case "micro":
+              return <i class="fa-solid fa-pencil" />;
+            case "essay":
+              return "📝";
+            case "list":
+              return "◯";
+            default:
+              return "🤷🏻‍♀️";
+          }
+        }
+      }
+    </span>
+
+    {
+      () => {
+        if (pinned) {
+          return <span>📌</span>;
+        }
+      }
+    }
+
+    {
+      () => {
+        if (date) {
+          return (
+            <span class="text-base-500 dark:text-base-black mx-2">
+              <i class="fa-solid fa-calendar-days mr-2" /> {datePretty(date)}
+            </span>
+          );
+        }
+      }
+    }
+
+    <span class="text-base-500 dark:text-base-black">
+      <i class="fa-solid fa-signal mr-2"></i>
+      {capitaliseFirstLetter(status)}
+    </span>
+  </div>
+</div>

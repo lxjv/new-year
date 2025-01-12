@@ -1,0 +1,25 @@
+---
+import Header from "../components/ui/Header.astro";
+import HeadMetadata from "../components/internal/HeadMetadata.astro";
+import Footer from "../components/ui/Footer.astro";
+import PageHeader from "../components/ui/PageHeader.astro";
+import Prose from "../components/ui/Prose.astro";
+
+const { date, title, type, status, icon, pinned, link } = Astro.props;
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="bg-base-paper text-base-black dark:bg-base-black dark:text-base-200"
+>
+  <HeadMetadata />
+  <body class="my-8 mx-6 md:mx-12 lg:mx-24 transition">
+    <Header />
+    <PageHeader date={date} title={title} type={type} status={status} icon={icon} pinned={pinned} link={link} />
+    <Prose>
+      <slot />
+    </Prose>
+    <Footer />
+  </body>
+</html>
