@@ -1,7 +1,7 @@
 ---
 import { datePretty } from "../../lib/filters/dateTime";
 import { capitaliseFirstLetter } from "../../lib/filters/text";
-const { date, title, type, icon, status, link, pinned } = Astro.props;
+const { date, title, type, icon, status, pinned } = Astro.props;
 ---
 
 <div class="mb-2">
@@ -16,12 +16,10 @@ const { date, title, type, icon, status, link, pinned } = Astro.props;
       {
         () => {
           switch (type) {
-            case "micro":
+            case "short":
               return <i class="fa-solid fa-pencil" />;
-            case "essay":
+            case "long":
               return "📝";
-            case "list":
-              return "◯";
             default:
               return "🤷🏻‍♀️";
           }

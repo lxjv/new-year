@@ -1,0 +1,21 @@
+---
+import { datePretty } from "../../lib/filters/dateTime";
+const { date, icon, status, link } = Astro.props;
+
+console.log(status)
+---
+
+<div class="mb-2 text-base-600">
+  <p>
+    A note from <i class="fa-solid fa-calendar-days mx-1"></i>
+    <a href={Astro.url.pathname}>{datePretty(date)}</a>...
+  </p>
+
+  {
+    () => {
+      if (link) {
+        return <p><i class="fa-solid fa-link"></i>This post links to <a href={link}>{link}</a></p>
+      }
+    }
+  }
+</div>

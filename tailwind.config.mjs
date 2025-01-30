@@ -9,6 +9,7 @@ export default {
       serif: ["IBM Plex Serif", ...defaultTheme.fontFamily.serif],
       sans: ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],
       mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
+      industrial: "Server Mono",
     },
     colors: {
       base: {

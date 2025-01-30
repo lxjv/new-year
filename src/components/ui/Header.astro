@@ -5,22 +5,24 @@ import HeaderLinks from "./HeaderLinks.astro";
 ---
 
 <header class="mb-5">
-  <div class="flex gap-x-6">
-    <a href="/">
-      <Image
-        src="https://fav.farm/%F0%9F%8C%8A"
-        alt="wave"
-        height="50"
-        width="50"
-        class="motion-safe:hover:animate-spin"
-        loading="eager"
-      />
-    </a>
-    <div>
-      <h1 class="text-2xl font-bold font-serif">
-        <a href="/" class="">{conf.meta.title}</a>
-      </h1>
-      <HeaderLinks />
+  <div class="flex">
+    <div class="flex gap-x-6">
+      <a href="/">
+        <Image
+          src="https://fav.farm/%F0%9F%8C%8A"
+          alt="wave"
+          height="50"
+          width="50"
+          class="motion-safe:hover:animate-spin"
+          loading="eager"
+        />
+      </a>
+      <div>
+        <h1 class="text-2xl font-bold font-serif">
+          <a href="/" class="">{conf.meta.title}</a>
+        </h1>
+        <HeaderLinks />
+      </div>
     </div>
   </div>
 </header>

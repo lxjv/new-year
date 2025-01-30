@@ -6,9 +6,9 @@ import { glob } from "astro/loaders";
 
 // 3. Define your collection(s)
 const content = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/" }),
+  loader: glob({ pattern: "**/*.md", base: "./content" }), 
   schema: z.object({
-    type: z.enum(["micro", "essay", "list"]),
+    type: z.enum(["short", "long"]),
     // everything needs these two
     date: z.date(),
     status: z.enum(["active", "done", "archive"]),

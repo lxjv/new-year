@@ -12,6 +12,7 @@
     "@astrojs/svelte": "^7.0.3",
     "@astrojs/tailwind": "^5.1.4",
     "astro": "^5.1.2",
+    "astro-meta-tags": "^0.3.1",
     "luxon": "^3.5.0",
     "svelte": "^5.16.1",
     "tailwindcss": "^3.4.17",
